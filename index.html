@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>デジタル庁公開デザインシステム テンプレート</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="mypage/mypage.js"></script>
+
+	</head>
+
+
+
+	<body>
+		<div id="container">
+			<!-- ======================================== -->
+			<!-- メインコンテンツ DIV -->
+			<!-- ======================================== -->
+			<div id="content_div" >
+
+				<h1>デジタル庁デザインシステムの実装</h1>
+				<p>デジタル庁公開データはFigmaを使っているので、html/cssに落とし込んでみる。</p>
+
+				<div class="wrapper">
+					<h3>プライマリ</h3>
+					<p>プライマリボタンは、ページ内で最も重要なアクション事に使用します。（例：「同意」、「送信」、「応募」）</p>
+					<div class="A">
+						<button id="primary_btn" class="btn">登録する</button>
+					</div>
+					<div class="B">
+						<button id="primary_btn_enable" class="btn btn--secondary">登録するを有効化</button>
+					</div>
+				</div>
+
+
+				<div class="wrapper">
+					<h3>セカンダリ</h3>
+					<p>プライマリボタンに比べて優先度が下がるアクションに対して使用します。（例：「問い合わせ」）</p>
+					<div class="A">
+						<button id="secondary_btn" class="btn btn--secondary">問い合わせ</button>
+					</div>
+					<div class="B">
+						<button id="secondary_btn_enable" class="btn btn--secondary">問い合わせを有効化</button>
+					</div>
+				</div>
+
+				
+				<div class="wrapper">
+					<h3>ターシャリ</h3>
+					<p>プライマリボタン及びセカンダリボタンと比べて優先度が低い3つ目のアクションに対して使用します。（例：「キャンセル」）</p>
+					<div class="A">
+						<button id="tertiary_btn" class="btn btn--tertiary">キャンセル</button>
+					</div>
+					<div class="B">
+						<button id="tertiary_btn_enable" class="btn btn--secondary">キャンセルを有効化</button>
+					</div>
+				</div>
+
+				<span id="message" class="link"></span>
+
+				<div>
+					<h3>セレクター</h3>
+					<p>リストが5つ以下の場合は、ラジオボタンの使用を推奨します。タップやクリックをせずに選択肢の全体が見え、選択がより簡単になります。</p>
+					<label class="input_label">セレクタ1</label>
+					<span class="input_label_required">必須</span>
+					<select class="select" id="select1">
+						<option value="option1">選択肢1</option>
+						<option value="option2">選択肢2</option>
+						<option value="option3">選択肢3</option>
+					</select>
+				</div>
+
+
+				<div>
+					<h3>テキスト入力</h3>
+					<p>コンテナーの横幅は、言葉の長さに合わせて調整してください。入力すべきものをより直感的にわかりやすくできます。</p>
+					<label class="input_label">テキスト1</label>
+					<span class="input_label_required">必須</span>
+					<input type="text" class="inputtext" id="inputtext1" value="" placeholder="プレイスホルダー">
+					<!-- <span class="input_helptext">ヘルプテキスト</span> -->
+
+
+					<label class="input_label">テキスト2</label>
+					<span class="input_label_required">必須</span>
+					<input type="text" class="inputtext" id="inputtext2" value="" placeholder="プレイスホルダー">
+					<!-- <span class="input_helptext">ヘルプテキスト</span> -->
+
+					<label class="input_label">テキスト3</label>
+					<span class="input_label_option">任意</span>
+					<input type="text" class="inputtext" id="inputtext3" value="" placeholder="プレイスホルダー">
+					<span class="input_helptext">ヘルプテキスト</span>
+				</div>
+
+				<div>
+					<h3>ラジオボタン（タイル型）</h3>
+					<p>デフォルト型、タイル型の2種類のラジオボタンがあります。補足説明が必要な場合にタイル型を活用できます。ふたつの型を同時に使用することはできません。</p>
+					<label class="input_label">ラジオ1</label>
+					<span class="input_label_required">必須</span>
+					
+					<div class="radio_btns">
+						<input type="radio" name="radio1" id="radio_option1" value="option1" >
+						<label for="radio_option1" class="radio_btn_tile">
+							<div class="radio_btn">
+							</div>
+							<div>
+								<div>選択肢1</div>
+								<div><span class="input_helptext">ヘルプテキスト</span></div>
+							</div>
+						</label>
+
+						<input type="radio" name="radio1" id="radio_option2" value="option2">
+						<label for="radio_option2" class="radio_btn_tile">
+							<div class="radio_btn">
+							</div>
+							<div>
+								<div>選択肢2</div>
+								<div><span class="input_helptext">ヘルプテキスト</span></div>
+							</div>
+						</label>
+
+						<input type="radio" name="radio1" id="radio_option3" value="option3">
+						<label for="radio_option3" class="radio_btn_tile">
+							<div class="radio_btn">
+							</div>
+							<div>
+								<div>選択肢3</div>
+								<div><span class="input_helptext">ヘルプテキスト</span></div>
+							</div>
+						</label>
+					</div>
+					<span class="input_helptext">ヘルプテキスト</span>
+				</div>
+
+
+				<div>
+					<h3>チェックボックス</h3>
+					<p>ひとつの項目しか選択できない場合は、必ずラジオボタンを使用してください。</p>
+					<p class="alert">チェックボックス、☑の再現、とりあえずまた気が向いたらやります。。。</p>
+					<label class="input_label">チェックボックス1</label>
+					<span class="input_label_required">必須</span>
+					
+					<div class="checkboxes">
+						<input type="checkbox" name="checkbox1" id="checkbox_option1" value="option1" >
+						<label for="checkbox_option1" class="checkbox_label">
+							<div class="checkbox_icon"><div class="checkbox"></div></div>
+							<div>選択肢1</div>
+						</label>
+
+						<input type="checkbox" name="checkbox1" id="checkbox_option2" value="option2" >
+						<label for="checkbox_option2" class="checkbox_label">
+							<div class="checkbox_icon"><div class="checkbox"></div></div>
+							<div>選択肢2</div>
+						</label>
+
+						<input type="checkbox" name="checkbox1" id="checkbox_option3" value="option3" >
+						<label for="checkbox_option3" class="checkbox_label">
+							<div class="checkbox_icon"><div class="checkbox"></div></div>
+							<div>選択肢3</div>
+						</label>
+					</div>
+					<span class="input_helptext">ヘルプテキスト</span>
+				</div>
+
+				<div>
+					<button id="invoke_btn" class="btn btn--primary" disabled>実行</button>
+				</div>
+				<span id="messageBottom" class="link"></span>
+
+			</div>
+
+		</div>
+		
+
+	</body>
+</html>

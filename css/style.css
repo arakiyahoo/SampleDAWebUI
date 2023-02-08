@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+*{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size:1rem;
+    outline:none;
+}
+html {
+   background-color: #F1F1F4; /* 周囲の背景色 */
+}
+body {
+    max-width: 1064px; /*パディング分を考慮して*/
+    min-width: 1064px; /*パディング分を考慮して*/
+    margin:auto;
+    padding: 40px;
+    background: #FFFFFF;
+
+}
+
+
+h1 {
+    font-weight: bold;
+    font-size:2.625rem;
+}
+
+h2 {
+    font-weight: bold;
+    font-size:2rem;
+}
+
+h3 {
+    font-weight: bold;
+    font-size:1.625rem;
+}
+
+h4 {
+    font-weight: bold;
+    font-size:1.375rem;
+}
+
+h5 {
+    font-weight: bold;
+    font-size:1.25rem;
+}
+
+h6 {
+    font-weight: bold;
+    font-size:1.125rem;
+}
+
+button {
+    font-weight: bold;
+    font-size:1rem;
+}
+
+/*---------------------------------------
+ボタン配置
+---------------------------------------*/
+
+.wrapper .A{
+    text-align:center;
+    
+    float:left;/*左周り*/
+    width:50%;
+
+}
+
+.wrapper .B{
+    text-align:center;
+    
+    float:right;/*右周り*/
+    width:50%;
+}
+
+
+
+
+
+
+/*---------------------------------------
+Primary Button
+---------------------------------------*/
+.btn {
+    border: 1px solid #003EE5;
+    position: relative;
+    padding: 1rem 4rem;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: all 0.3s;
+    vertical-align: middle;    
+    text-decoration: none;
+    border-radius: 0.5rem;
+    width: fit-content;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    font-feature-settings: 'pwid' on;
+
+    color: #FFFFFF;
+    background: #003EE5;
+    min-width: 256px;
+}
+
+
+.btn:hover {
+  background: #0030B2;
+    border: 1px solid #0030B2;
+}
+
+.btn:active {
+  background: #0030B2;
+    border: 1px solid #0030B2;
+}
+
+.btn:focus {
+    /* Light/Border/Focused */
+    border: 1px solid #D18D0F;
+}
+
+.btn:disabled {
+    border: 1px solid #949497;
+  background: #949497;
+  pointer-events: none;
+}
+
+
+/*---------------------------------------
+Secondary Button ※プライマリボタンの色などの上書き定義
+---------------------------------------*/
+.btn.btn--secondary {
+
+    /* Light/Text/On Fill */
+    color: #003EE5;
+
+    /* Light/Button/Normal */
+    background: #FFFFFF;
+
+    /* Light/Button/Normal */
+
+    border: 1px solid #003EE5;
+    border-radius: 8px;
+}
+
+
+.btn.btn--secondary:hover {
+    color:  #0030B2;
+    background: #E8F1FE;
+    border: 1px solid #0030B2;
+}
+
+.btn.btn--secondary:active {
+    color:  #0030B2;
+    background: #E8F1FE;
+    border: 1px solid #0030B2;
+}
+
+.btn.btn--secondary:focus {
+    /* Light/Border/Focused */
+    border: 1px solid #D18D0F;
+    background: transparent;
+}
+
+.btn.btn--secondary:disabled {
+    border: 1px solid #949497;
+    background: #FFFFFF;
+    color: #949497;
+}
+
+
+/*---------------------------------------
+Tertiary Button ※プライマリボタンの色などの上書き定義
+---------------------------------------*/
+.btn.btn--tertiary {
+
+    /* Light/Text/On Fill */
+    color: #003EE5;
+
+    /* Light/Button/Normal */
+    background: transparent;
+
+    /* Light/Button/Normal */
+
+    border: 1px solid transparent;
+    text-decoration-line: underline;
+}
+
+
+.btn.btn--tertiary:hover {
+    color:#0030B2 ;
+    border: 1px solid transparent;
+}
+
+.btn.btn--tertiary:active {
+    color: #0030B2;
+    border: 1px solid transparent;
+}
+
+.btn.btn--tertiary:focus {
+    /* Light/Border/Focused */
+    border: 1px solid #D18D0F;
+}
+
+.btn.btn--tertiary:disabled {
+    border: 1px solid transparent;
+    color: #949497;
+}
+
+
+
+
+
+/*---------------------------------------
+input / select
+---------------------------------------*/
+
+.inputtext ,
+.select {
+   /* Input */
+
+    margin:8px 0px;
+    box-sizing: border-box;
+
+    /* オートレイアウト */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 8px;
+
+    width: 327px;
+    height: 56px;
+
+    /* Light/Background/Primary */
+
+    background: #FFFFFF;
+    /* Light/Border/Field */
+
+    border: 1px solid #1A1A1C;
+    border-radius: 8px;
+
+    /* オートレイアウト内部 */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0; 
+}
+
+.input:focus,
+.select:focus{
+
+    border: 1px solid #D18D0F;
+}
+
+.input_error ,
+.select_error {
+
+    border: 1px solid #EC0000;
+
+}
+
+.input_label {
+    /* Label */
+
+    /* Subtitle2/Mobile */
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 175%;
+    /* ボックスの高さと同一、または24px */
+
+    letter-spacing: 0.04em;
+    font-feature-settings: 'pwid' on;
+
+    /* Light/Text/Body */
+
+    color: #1A1A1C;
+
+
+
+}
+
+
+.input_label_required {
+    margin-left:8px;
+   /* Required */
+    /* Capture/Mobile */
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* ボックスの高さと同一、または18px */
+
+    letter-spacing: 0.0125em;
+    font-feature-settings: 'pwid' on;
+
+    /* Light/Text/Alert */
+
+    color: #EC0000;
+
+}
+
+.input_label_option {
+
+    margin-left:8px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* ボックスの高さと同一、または18px */
+
+    letter-spacing: 0.0125em;
+    font-feature-settings: 'pwid' on;
+
+    /* Light/Text/Alert */
+
+    color: #999999;
+
+}
+
+
+
+.input_helptext {
+    /* String */
+
+
+    width: 327px;
+    height: 18px;
+
+    /* Capture/Mobile */
+
+    font-family: 'Noto Sans JP';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    /* ボックスの高さと同一、または18px */
+
+    letter-spacing: 0.0125em;
+    font-feature-settings: 'pwid' on;
+
+    /* Light/Text/Description */
+
+    color: #626264;
+}
+
+
+
+
+
+
+
+/*---------------------------------------
+radioボタン
+---------------------------------------*/
+
+
+
+input[type=radio] {
+    opacity:0;
+    position: absolute;
+}
+
+.radio_btn_tile {
+    cursor: pointer;
+    /* Tile */
+
+
+    box-sizing: border-box;
+    margin:8px 0px;
+    /* オートレイアウト */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+
+    width: 327px;
+    height: 74px;
+
+    /* Light/Background/Primary */
+
+    background: #FFFFFF;
+    /* Light/Border/Field */
+
+    border: 1px solid #1A1A1C;
+    border-radius: 8px;
+
+    /* オートレイアウト内部 */
+
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+
+.radio_btn {
+    display: block;
+    border-radius: 50%;
+    border: 4px solid #FFFFFF;
+    background-color: #FFFFFF; 
+    box-shadow:0 0 0 2px #1A1A1C;
+    width: 13px;
+    height: 13px;
+}
+
+
+.radio_btns input[type=radio]:checked + .radio_btn_tile {
+    border: 1px solid #003EE5;
+}
+
+
+.radio_btns input[type=radio]:checked + .radio_btn_tile .radio_btn{
+
+    border: 4px solid #FFFFFF;
+    background-color: #003EE5; 
+    box-shadow:0 0 0 2px #003EE5;
+    width: 13px;
+}
+
+
+
+/*---------------------------------------
+チェックボックス
+---------------------------------------*/
+input[type=checkbox] {
+    opacity:0;
+    position: absolute;
+}
+
+.checkbox_label {
+    cursor: pointer;
+
+    /* Checkbox */
+
+
+    /* オートレイアウト */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+
+    width: 327px;
+    height: 40px;
+
+
+    /* オートレイアウト内部 */
+
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+
+.checkbox_icon {
+    /* Icon */
+
+
+    width: 24px;
+    height: 24px;
+
+
+    /* オートレイアウト内部 */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+
+.checkbox {
+    position: relative;
+    left: 14.58%;
+    right: 14.58%;
+    top: 14.58%;
+    bottom: 14.58%;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #1A1A1C;
+    /* Light/Icon/Active */
+
+    background: #FFFFFF;
+    border-radius: 3px;
+}
+
+
+.checkboxes input[type=checkbox]:checked + .checkbox_label .checkbox_icon .checkbox{
+    border: 1px solid #003EE5;
+    background: #003EE5;
+    border-radius: 3px;
+    content: "s";
+
+}
+
+
+
+
+
+
+
+/*---------------------------------------
+カラー
+---------------------------------------*/
+
+.description {
+    color: #626264;
+}
+
+
+.place_holder {
+    color: #757578;
+}
+
+
+.link {
+    color: #003EE5;
+}
+
+
+.visited {
+    color: #0000BE;
+}
+
+
+.alert {
+    color: #EC0000;
+}
+
+.disabled {
+    color: #949497;
+}
+
+
+
